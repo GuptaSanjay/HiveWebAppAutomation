@@ -45,6 +45,7 @@ public class LoginPage {
         setUserName(userName);
         setPassword(password);
         clickLogin();
+        //soni
     }
 
 }
