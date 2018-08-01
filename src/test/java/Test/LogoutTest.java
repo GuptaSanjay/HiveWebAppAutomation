@@ -19,9 +19,9 @@ public class LogoutTest {
 
         logoutPage.clickLogoutButton();
     }
-
+//logged out successfully
     public void loggedoutSuccessfully() {
-
+System.out.println("Successfully");
         logoutPage.loggedoutSuccessfully();
     }
 }
