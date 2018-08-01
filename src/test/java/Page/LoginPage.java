@@ -1,5 +1,6 @@
 package Page;
 
+import DriverInitializer.InitializeDriver;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -15,10 +16,10 @@ public class LoginPage {
     WebElement password;
     @FindBy(xpath="//button[@data-qa='login-input-submit']")
     WebElement submit;
-    public LoginPage(WebDriver driver)
+    public LoginPage()
     {
-
-        this.driver=driver;
+        InitializeDriver initializeDriver=new InitializeDriver();
+        this.driver=initializeDriver.initializeDriver();
         PageFactory.initElements(driver, this);
     }
     public String getLoginTitle()
@@ -40,6 +41,7 @@ public class LoginPage {
     }
     public void loginToHive(String userName, String password)
     {
+        System.out.println("insideLOginTohive2");
         setUserName(userName);
         setPassword(password);
         clickLogin();
